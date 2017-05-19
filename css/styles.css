@@ -1,0 +1,294 @@
+html{
+    height: 100%
+}
+
+/*Global background body color and font*/
+body{
+    background-color: #191919; /**/
+    font-family: calibri, helvetica, arial, sans-serif; /*website font stack - in order of priority*/
+    height: 100%
+}
+
+/*Container, containing the header, the content and the footer*/
+#container{
+    background-color: whitesmoke; /*background colour of the entire container*/
+    max-width: 700px; /*maximum width the container will allow*/
+    margin: auto; /*function to centre the page*/
+    padding: 10px; /*padding of the edges - meaning that elemnts inside will give 20px clerance from the borders*/
+}
+
+#logo{
+    text-align:center;
+    display:block;
+}
+
+#welcomeMessage{
+    color: #3B3738;
+    font-size: 18px;
+    font-family: 'Signika', sans-serif;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/*Register link on the login page*/
+#registerLink{
+    color: black; /*make the link, the specified color*/
+    position: relative; /*Used to specify that an element will be positioned at a position relative to its orignal position*/
+    text-align: center; /*move to the right*/
+}
+
+/*All website forms*/
+form{
+    border: 3px solid #f1f1f1; /*The dimension, border style and colour of the faint border around all forms on the website*/
+}
+
+/* All website inputs, except comments field */
+input[type=date], input[type=email], input[type=password], input[type=text] {
+    border: 1px solid #ccc; /*The dimension, border style and colour of the faint border around all input fields on the website*/
+    box-sizing: border-box; /*Used to tell the brower what the sizing properties (width and height) should include, in this case, 'border-box': the width and height properties (and min/max properties) includes content, padding and border, but not the margin*/
+    display: inline-block; /*Used to make boxes fill the browser width and wraps*/
+    margin: 8px 0; /*Margins around the input fields*/
+    padding: 12px 20px; /*Dimensions of the inputs (height and width)*/
+    width: 100%; /*Full-width for all inputs*/
+}
+
+/*Study plan comments input fields*/
+#studyPlanComments{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*All website buttons*/
+button {
+    background-color: #C60000; /*blue background*/
+    border: none; /*gives style to the button border, in this case no style is applied*/
+    color: white; /*white font*/
+    cursor: pointer; /*used to set the curosr to a 'hand' when you hover over any buttons on the website*/
+    margin: 8px 0; /*margin around the button*/
+    padding: 10px 20px; /*Dimensions of the buttons*/
+    width: 100%; /*full width*/
+}
+
+/* Add a hover effect for all buttons */
+button:hover {
+    opacity: 0.8; /*turn 80% transparent on hover*/
+}
+
+label{
+    color: darkblue;
+}
+
+/*Website links*/
+a:link, a:visited {
+    background-color: #3B3738; /*Sets the colour of the link button*/
+    color: white; /*Sets the colour of the font*/ 
+    padding: 5px 20px; /*Sets the dimensions (width and height) of the link buttons*/
+    text-align: center; /*Aligns the text in the link to the centre*/
+    text-decoration: none; /*Sets the decoration of the link text. In this case, 'none' removes usual underline under links*/
+}
+
+a:hover {
+    background-color: #C60000; /*Sets the hover effect of all links. in this case, it sets the colour to red when hovered over*/
+}
+
+a:active{
+    background-color: #00469E; /*Sets the click effect of all links. in this case, it sets the colour to green when clicked*/
+}
+
+h1 {
+    color: #3B3738;
+    font-size: 72px;
+    font-family: 'Signika', sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    color: #3B3738;
+    font-family: 'Signika', sans-serif;
+    padding-bottom: 5px;
+    text-align: center /*Aligns h3 texts to the center*/
+}
+
+h4{
+    color: #00469E; /*Sets h3 texts to blue colour*/
+    text-align: center /*Aligns h3 texts to the center*/
+}
+
+#mandatoryFields {
+    color: darkblue; /*Sets text colour*/
+    font-style: italic; /*Italicizes the text*/
+    text-align: center /*Aligns h4 texts to the center*/
+}
+
+/*Back button on the registration page*/
+#back{
+    text-align: center; /*move to the centre*/
+}
+
+/* The Modal (background) */
+.modal {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: none; /* Hidden by default */
+    height: 100%; /* Full height */
+    left: 0;
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 60px;
+    position: fixed; /* Stay in place */
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 1; /* Sit on top */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    margin: 5px auto; /* 15% from the top and centered */
+    padding: 20px; /*Padding around the modal content*/
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the modal */
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    right: 25px;
+    top: 0; 
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/*Bar Chart*/
+.bar{
+    fill: steelblue;
+}
+
+.bar:hover{
+    fill: brown;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+/*Tooltip*/
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/*Calendar and Module tables*/
+#tableContainer{
+    display: block;
+    overflow-x:auto;
+}
+
+#table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table td, #table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #00469E;
+    color: white;
+}
+
+/*Weekly View Dropdown*/
+#weeklyView{
+    border: 1px solid #ccc; /*The dimension, border style and colour of the faint border around all input fields on the website*/
+    box-sizing: border-box; /*Used to tell the browser what the sizing properties (width and height) should include, in this case, 'border-box': the width and height properties (and min/max properties) includes content, padding and border, but not the margin*/
+    display: inline-block; /*Used to make boxes fill the browser width and wraps*/
+    margin: 8px 0; /*Margins around the input fields*/
+    padding: 5px 15px; /*Dimensions of the inputs (height and width)*/
+    text-align: left;
+    /*width: 100%; Commented out to make dropwdown autofit contents*/ /*Full-width for all inputs*/
+}
+
+/*Registered Modules Dropdown*/
+#registeredModules{
+    border: 1px solid #ccc; /*The dimension, border style and colour of the faint border around all input fields on the website*/
+    box-sizing: border-box; /*Used to tell the browser what the sizing properties (width and height) should include, in this case, 'border-box': the width and height properties (and min/max properties) includes content, padding and border, but not the margin*/
+    display: inline-block; /*Used to make boxes fill the browser width and wraps*/
+    margin: 8px 0; /*Margins around the input fields*/
+    padding: 5px 20px; /*Dimensions of the inputs (height and width)*/
+    text-align: left;
+    width: 100%
+    /*width: 100%; Commented out to make dropwdown autofit contents*/ /*Full-width for all inputs*/
+}
+
+#moduleAllocatedHours{
+    border: 1px solid #ccc; /*The dimension, border style and colour of the faint border around all input fields on the website*/
+    box-sizing: border-box; /*Used to tell the browser what the sizing properties (width and height) should include, in this case, 'border-box': the width and height properties (and min/max properties) includes content, padding and border, but not the margin*/
+    display: inline-block; /*Used to make boxes fill the browser width and wraps*/
+    margin: 8px 0; /*Margins around the input fields*/
+    padding: 5px 10px; /*Dimensions of the inputs (height and width)*/
+    text-align: left;
+    /*width: 100%; Commented out to make dropwdown autofit contents*/ /*Full-width for all inputs*/
+}
+
+/*Dividers*/
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+/*Footer text of the website - applicable to all pages*/
+#footerText{
+    text-align: center; /*Sets the text alignment. In this case, to the center*/
+}
